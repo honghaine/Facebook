@@ -1,0 +1,32 @@
+html {
+    background-color: #f0f2f5;
+}
+
+.upload {
+    display: flex;
+    gap: 5px
+}
+
+.post {
+    display: flex;
+    width: 411px;
+    height: 120px;
+    margin: auto;
+    margin-top: 25px;
+    padding: 10px;
+    gap: 5px;
+    background-color: white;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.post a {
+    height: 40px;
+}
+
+.content {
+    display: flex;
+    gap: 158px;
+    padding: 10px;
+    border-top: 1px solid;
+}
