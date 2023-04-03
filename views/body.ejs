@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <script src="script/body.js" defer></script>
+    <script src="script/popup.js" defer></script>
     <title>Facebook</title>
 </head> 
 <body>
@@ -12,8 +15,10 @@
     <div class="post">
         <div class="upload">
             <a href=""><img src="images/user.png" width="40" height="40" alt="user"> </a>
-            <input type="text" placeholder="Search Facebook" class="search-bar">
+            <input type="text" placeholder="What is in your mind?" class="search-bar" id="newpost" onclick="display()">
         </div>
+        <hr style="width:100%;text-align:left;margin-left:0">
+
         <div class="content">
             <div class = "activity">
                 <img height="24" width="24" alt="" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/v1iF2605Cb5.png">
@@ -28,7 +33,21 @@
                 <p>Felling/activity</p>
             </div>
         </div>
-
     </div>
+
+    <div class="modal" id="modal">
+        <form class="popup">
+            <span class="close">&times;</span>
+            <h3>Create post</h3>
+            <div>
+                <a href=""><img src="images/user.png" width="40" height="40" alt="user"> </a>
+                <h4>Hai To</h4>
+            </div>
+            <textarea placeholder="What is in your mind?" id="content-text" name="content-text" rows="4" cols="50"></textarea>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+    <button id="click">check</button>
 </body>
 </html>
