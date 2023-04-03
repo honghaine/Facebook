@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-
+const newsfeed = require('./controller/newsfeed')
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -19,9 +19,11 @@ app.use(function(err, req, res, next){
     res.status(500).render('500');
 });
 
-app.get('/', function(req, res){
-    res.render('body');
-});
+// app.get('/', function(req, res){
+//     res.render('body');
+// });
+
+app.use(newsfeed);
 
 app.listen(3000);
 
