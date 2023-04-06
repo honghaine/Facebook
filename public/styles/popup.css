@@ -38,7 +38,9 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 0px; /* Location of the box */
+    /* padding-top: 0px; Location of the box */
+    padding-top: 70px;
+    padding-left: 710px;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -49,13 +51,6 @@
     margin-top: 0px;
 }
 
-.popup {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px; /* Could be more or less, depending on screen size */
-}
 
 .close {
     color: #aaaaaa;

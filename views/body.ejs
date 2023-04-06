@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="script/body.js" defer></script>
     <script src="script/popup.js" defer></script>
     <title>Facebook</title>
@@ -14,7 +15,7 @@
     <%- include('includes/nav-bar.ejs') %>  
     <div class="post">
         <div class="upload">
-            <a href=""><img src="images/user.png" width="40" height="40" alt="user"> </a>
+            <a href=""><img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-1/301430503_2330755143742549_578938133435934462_n.jpg?stp=c7.62.60.60a_cp0_dst-jpg_p74x74&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=IN61V9h8PcMAX-xo6Nz&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBZlXXt-Qx4WcuurTDLmYlwNG17RbX608Gh4tPR_iWsJA&oe=6434332A" width="40" height="40" alt="user" style="border-radius: 50%;"> </a>
             <input type="text" placeholder="What is in your mind?" class="search-bar" id="newpost" onclick="display()">
         </div>
         <hr style="width:100%;text-align:left;margin-left:0">
@@ -35,7 +36,7 @@
         </div>
     </div>
 
-    <div class="modal" id="modal">
+    <!-- <div class="modal" id="modal">
         <form class="popup" action="/" method="POST">
             <span class="close">&times;</span>
             <h3>Create post</h3>
@@ -46,6 +47,112 @@
             <textarea placeholder="What is in your mind?" id="content-text" name="content-text" rows="4" cols="50"></textarea>
             <button type="submit">Post</button>
         </form>
+    </div> -->
+    <div class="modal" id="modal">
+        <div class="container">
+            <div class="wrapper">
+              <section class="postbox">
+                <header>Create Post</header>
+                <form action="#">
+                  <div class="content">
+                    <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-1/301430503_2330755143742549_578938133435934462_n.jpg?stp=c7.62.60.60a_cp0_dst-jpg_p74x74&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=IN61V9h8PcMAX-xo6Nz&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBZlXXt-Qx4WcuurTDLmYlwNG17RbX608Gh4tPR_iWsJA&oe=6434332A" alt="logo" style="border-radius: 50%;">
+                    <div class="details">
+                      <p>Hải Tô Tô</p>
+                      <div class="privacy">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Friends</span>
+                        <i class="fas fa-caret-down"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <textarea placeholder="What's on your mind, CodingNepal?" spellcheck="false" required></textarea>
+                  <div class="theme-emoji">
+                    <img src="icons/theme.svg" alt="theme">
+                    <img src="icons/smile.svg" alt="smile">
+                  </div>
+                  <div class="options">
+                    <p>Add to Your Post</p>
+                    <ul class="list">
+                      <li><img src="icons/gallery.svg" alt="gallery"></li>
+                      <li><img src="icons/tag.svg" alt="gallery"></li>
+                      <li><img src="icons/emoji.svg" alt="gallery"></li>
+                      <li><img src="icons/mic.svg" alt="gallery"></li>
+                      <li><img src="icons/more.svg" alt="gallery"></li>
+                    </ul>
+                  </div>
+                  <button>Post</button>
+                </form>
+              </section>
+              <section class="audience">
+                <header>
+                  <div class="arrow-back"><i class="fas fa-arrow-left"></i></div>
+                  <p>Select Audience</p>
+                </header>
+                <div class="contents">
+                  <p>Who can see your post?</p>
+                  <span>Your post will show up in News Feed, on your profile and in search results.</span>
+                </div>
+                <ul class="list">
+                  <li>
+                    <div class="column">
+                      <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                      <div class="details">
+                        <p>Public</p>
+                        <span>Anyone on or off Facebook</span>
+                      </div>
+                    </div>
+                    <div class="radio"></div>
+                  </li>
+                  <li class="active">
+                    <div class="column">
+                      <div class="icon"><i class="fas fa-user-friends"></i></div>
+                      <div class="details">
+                        <p>Friends</p>
+                        <span>Your friends on Facebook</span>
+                      </div>
+                    </div>
+                    <div class="radio"></div>
+                  </li>
+                  <li>
+                    <div class="column">
+                      <div class="icon"><i class="fas fa-user"></i></div>
+                      <div class="details">
+                        <p>Specific</p>
+                        <span>Only show to some friends</span>
+                      </div>
+                    </div>
+                    <div class="radio"></div>
+                  </li>
+                  <li>
+                    <div class="column">
+                      <div class="icon"><i class="fas fa-lock"></i></div>
+                      <div class="details">
+                        <p>Only me</p>
+                        <span>Only you can see your post</span>
+                      </div>
+                    </div>
+                    <div class="radio"></div>
+                  </li>
+                  <li>
+                    <div class="column">
+                      <div class="icon"><i class="fas fa-cog"></i></div>
+                      <div class="details">
+                        <p>Custom</p>
+                        <span>Include and exclude friends</span>
+                      </div>
+                    </div>
+                    <div class="radio"></div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
     </div>
+ 
+
+      <script>
+
+      </script>
+
 </body>
 </html>
