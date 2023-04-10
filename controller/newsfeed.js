@@ -23,7 +23,7 @@ router.post('/signin', async function(req, res){
     let passwordEqual = await bcrypt.compare(inputPassword, passwordAccount[0].password);
     if(!passwordEqual) {
         console.log('Wrong password');
-        return res.render('signin');
+        res.redirect('/');
     }   
     res.redirect('/')
 })
